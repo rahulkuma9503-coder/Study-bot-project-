@@ -1,74 +1,17 @@
-# Environment files
-.env
-.env.*
-!.env.example
-
-# Git files
-.git
-.gitignore
-.gitattributes
-
-# GitHub
-.github
-
-# Python cache
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
+*.pyc
+*.pyo
+*.pyd
 .Python
-
-# Virtual environments
-venv/
 env/
-ENV/
-.venv
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+venv/
+.venv/
+.env
 .DS_Store
-
-# Documentation
+.git/
+.gitignore
 README.md
-SETUP_GUIDE.md
-*.md
-
-# Test files
-test_*.py
-tests/
-.pytest_cache/
-
-# Build files
-build/
-dist/
-*.egg-info/
-
-# Logs
-*.log
-logs/
-
-# OS files
-Thumbs.db
-.DS_Store
-
-# Temporary files
-*.tmp
-*.bak
-*.backup
-
-# Docker files (no need to copy into image)
 docker-compose.yml
-Dockerfile
-.dockerignore
-
-# Development scripts
-deploy.sh
-Makefile
-
-# CI/CD
-.travis.yml
-.gitlab-ci.yml
+render.yaml
+data/
+*.log
