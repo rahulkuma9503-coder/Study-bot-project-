@@ -1,13 +1,19 @@
 services:
   - type: web
-    name: telegram-member-bot
-    env: docker
+    name: telegram-target-bot
+    env: python
+    region: singapore  # or choose closest to you: oregon, frankfurt, etc.
     plan: free
-    region: oregon
+    healthCheckPath: /health
+    autoDeploy: true
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
     envVars:
       - key: BOT_TOKEN
         sync: false
-      - key: ALLOWED_GROUP_ID
+      - key: MONGODB_URI
         sync: false
-    healthCheckPath: /
-    autoDeploy: true
+      - key: DB_NAME
+        value: telegram_target_bot
+      - key: PYTHON_VERSION
+        value: 3.11.0
